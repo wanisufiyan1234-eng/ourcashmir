@@ -67,6 +67,7 @@
 
 </head>
 
+
 <body id="body"> 
     <!-- ---------------------------------------------------
 Loading Screen 
@@ -124,8 +125,8 @@ Hero Section
 --------------------------------------------------- -->
         <section class="hero" id="hero">
             <div class="text-container">
-                <h1>Growing Brands<br>
-                    <span>of Kashmir</span><br>
+                <h1>Growing Brands Of<br>
+                    <span>Kashmir</span><br>
 
                 </h1>
                 <p>Most businesses here struggle to reach the right people.
@@ -141,7 +142,95 @@ Hero Section
                     <a href="#book-a-call" class="cta filled-cta">Book a Call</a>
                 </div>
             </div>
+    
         </section>
+        <div></div>
+        <!-- === Affiliate button widget — paste this inside <body> where you want the button === -->
+<div id="affiliate-widget" aria-hidden="false">
+  <style>
+    /* Scoped styles for the widget (prefix #affiliate-widget to avoid collisions) */
+    #affiliate-widget { display:flex; justify-content:center; align-items:center; padding:28px 0; box-sizing:border-box; }
+    #affiliate-widget .affiliate-link{
+      --neon: #00ff6a;
+      --neon-dark: #06d055;
+      display:inline-block;
+      text-decoration:none;
+      font-weight:700;
+      font-size:clamp(18px, 2.4vw, 26px);
+      letter-spacing:0.5px;
+      color:#03120b;
+      padding:18px 44px;
+      border-radius:16px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 0.92));
+      position:relative;
+      z-index:1;
+      box-shadow: 0 6px 20px rgba(0,255,106,0.12);
+      transition: transform .18s cubic-bezier(.2,.9,.3,1), box-shadow .18s;
+      transform: translateZ(0);
+      -webkit-tap-highlight-color: transparent;
+      cursor:pointer;
+    }
+    #affiliate-widget .affiliate-link::before{
+      content:"";
+      position:absolute;
+      inset:-6px;
+      background: linear-gradient(90deg, rgba(0,255,106,0.18), rgba(0,255,170,0.10), rgba(0,255,106,0.18));
+      filter: blur(12px);
+      z-index:-2;
+      border-radius:20px;
+      opacity:0.95;
+      animation: affiliate-pulse 2.8s ease-in-out infinite;
+    }
+    #affiliate-widget .affiliate-link::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:16px;
+      padding:2px;
+      background: linear-gradient(90deg, rgba(0,255,106,0.03), rgba(0,255,106,0.01));
+      z-index:-1;
+      pointer-events:none;
+    }
+    @keyframes affiliate-pulse{
+      0%   { filter: blur(8px); opacity:.85; transform: scale(1); }
+      50%  { filter: blur(18px); opacity:.55; transform: scale(1.02); }
+      100% { filter: blur(8px); opacity:.85; transform: scale(1); }
+    }
+    #affiliate-widget .affiliate-link:hover{ transform: translateY(-4px) scale(1.02); box-shadow: 0 18px 40px rgba(0,255,106,0.18); }
+    #affiliate-widget .affiliate-link:active{ transform: translateY(-1px) scale(.995); }
+
+    /* small left icon */
+    #affiliate-widget .icon{
+      display:inline-block;
+      vertical-align:middle;
+      margin-right:12px;
+      width:34px;
+      height:34px;
+      border-radius:10px;
+      background: linear-gradient(180deg,var(--neon),var(--neon-dark));
+      box-shadow: 0 6px 18px rgba(0,255,106,0.28);
+      color:#02120b;
+      font-weight:800;
+      text-align:center;
+      line-height:34px;
+      font-size:16px;
+    }
+
+    /* responsive */
+    @media (max-width:520px){
+      #affiliate-widget { padding:18px 0; }
+      #affiliate-widget .affiliate-link{ padding:14px 28px; border-radius:12px; font-size:18px; }
+      #affiliate-widget .icon{ width:28px;height:28px; line-height:28px; margin-right:8px; font-size:14px; border-radius:8px;}
+    }
+  </style>
+
+  <a href="newpage.html" class="affiliate-link" title="Join our Affiliate Program to Earn Money">
+    <span class="icon" aria-hidden="true">₹</span>
+    <span>Join our Affiliate Program to Earn Money</span>
+  </a>
+</div>
+<!-- === end widget === -->
+
 <!-- ---------------------------------------------------
 Results Section 
 --------------------------------------------------- -->
@@ -159,7 +248,10 @@ Results Section
                     <h3>20M+</h3>
                     <p>Accounts Reached</p>
                 </div>
-            </div>
+            </div> 
+  </a>
+</div>
+
         </section>
         <!-- ---------------------------------------------------
 Clients Section
@@ -284,7 +376,7 @@ Expertise Section
 portfolio Section
 --------------------------------------------------- -->
         <section class="portfolio" id="portfolio">
-            <pre>           Videos
+<pre>Videos
 <span>that Makes </span>
 your brand spread
 <span>like wildfire</span>
@@ -546,28 +638,28 @@ Satisfaction</span></pre>
                         Their ability to adapt quickly is impressive.
                         The quality of their work has consistently exceeded our expectations. We highly recommend their
                         services."</p>
-                    <a href="https://www.instagram.com/motabhailikes/" target="_blank">
+                    <a href="https://www.instagram.com/dr_wani_majid/" target="_blank">
                         <div class="abt-client">
-                            <img src="Images/People/parth.png" alt="" loading="lazy">
+                            <img src="Images/People/DR UNCLE.JPG" alt="" loading="lazy">
                             <div>
-                                <h2>Parth Shah</h2>
-                                <p>Content Creator</p>
+                                <h2>Abdul Majid Wani</h2>
+                                <p>Doctor, Entrepreneur</p>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="testimonial">
 
-                    <p>"I have worked with Our Cashmir. He is soft spoken responsive and skilled at his age.
+                    <p>"I have worked with Sufiyan. He is soft spoken responsive and skilled at his age.
                         I would recommend work with Our Cashmir."</p>
 
-                    <a href="https://www.linkedin.com/in/udit-agnihotry-627680124/?originalSubdomain=in"
+                    <a href="https://www.instagram.com/irfannn_1?igsh=Yzdpa2NybHA2eTll"
                         target="_blank">
                         <div class="abt-client">
-                            <img src="Images/People/udit.jpeg" alt="" loading="lazy">
+                            <img src="Images/People/IRFAN NAZIR.PNG" alt="" loading="lazy">
                             <div>
-                                <h2>Udit Agnihotry</h2>
-                                <p>Founder- 9AV Productions</p>
+                                <h2>Irfan Nazir</h2>
+                                <p>Social Activist, Author</p>
                             </div>
 
                         </div>
@@ -580,13 +672,13 @@ Satisfaction</span></pre>
                         One thing I liked about them is they take feedback positively and work on them.
 
                         Their quality of work is good, we would recommend that you to take their services."</p>
-                    <a href="https://www.instagram.com/vishalmanocha381/?hl=en" target="_blank">
+                    <a href="https://www.instagram.com/uzairr.hameed" target="_blank">
                         <div class="abt-client">
                             <img src="https://media.licdn.com/dms/image/v2/D4D03AQFnOrEIGwOTjw/profile-displayphoto-scale_200_200/B4DZhQjlE2GgAY-/0/1753698161495?e=2147483647&v=beta&t=MTSazVEprTOjcUHmkVzlpzNqr3FOz6fHCGpjzN1Ovx0"
                                 alt="" loading="lazy">
                             <div>
-                                <h2>Vishal Manocha</h2>
-                                <p>Career Coach</p>
+                                <h2>Uzair Hameed</h2>
+                                <p>Entrepreneur</p>
                             </div>
 
                         </div>
@@ -619,8 +711,8 @@ Start growing <span>Tomorrow</span></pre>
                 </div>
             </div>
         </section> -->
-
         <!-- ---------------------------------------------------
+</div>
 FAQs Section 
 --------------------------------------------------- -->
         <section class="qns-ans" id="faqs">
@@ -756,8 +848,8 @@ Team Section
                     </div>
                 </div>
 
-                <div class="team-member member-3" id="team-member">
-
+                <div class="team-member member-3" id="team-member"
+                 style="background: url('Images/Team/rehmat.jpg') no-repeat center center/cover;">
                     <h2>Rehmat</h2>
                     <p><span>Co Founder &</span> CTO</p>
                     <div class="icons">
@@ -765,18 +857,9 @@ Team Section
                                 src="Images/Icons/insta.png" alt=""></a>
                     </div>
                 </div>
-                <div class="team-member member-4" id="team-member">
-
-                    <h2></h2>
-                    <p><span>Software</span> Developer</p>
-                    <div class="icons">
-                        <a href="https://www.instagram.com/codewithhaneef/" target="_blank"><img
-                                src="Images/Icons/insta.png" alt=""></a>
+               
                     </div>
                 </div>
-
-            </div>
-        </section>
         <!-- ---------------------------------------------------
 Book a Call Section 
 --------------------------------------------------- -->
@@ -789,8 +872,13 @@ Book a Call Section
                 <a href="http://wa.me/917889676481" target="_blank" class="cta filled-cta">Book a
                     Call</a>
                 <a href="mailto:teamourcashmir@gmail.com" target="_blank" class="cta">Get in Touch</a>
-            </div>
+  </main>
+</body>
+</html>
+
         </section>
+
+</div>
 
     </main>
     <footer>
@@ -864,6 +952,8 @@ Book a Call Section
   
 </style>
 
+<body>
+    
 </body>
 
 </html>
