@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Cashmir Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- End Font Awesome -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- End Google Fonts -->
+
+  <!-- AOS GitHub -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+  <!--End AOS GitHub -->
+
+  <!-- StyleSheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="responsive.css">
+  <!-- End StyleSheets -->
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  <!-- Scripts -->
+
+  <!-- Favicon  -->
+  <link rel="icon" type="image/x-icon" href="Images/Favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="Images/Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/Favicon/favicon-16x16.png">
+  <link rel="manifest" href="Images/Favicon/site.webmanifest">
+  <!-- Favicon  -->
+
+  <style>
+    /* Keep original portfolio margin */
+    section.portfolio pre {
+      margin-bottom: 5rem;
+    }
+
+    /* === Neon Background + Floating Dots === */
+    body {
+      position: relative;
+      background: #000;00
+      overflow-x: hidden;
+    }
+
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .floating-dot {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(0, 255, 150, 0.4);
+      filter: blur(3px);
+      animation: float 10s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: translateY(-100px) translateX(50px);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.6;
+      }
+    }
+
+    /* Subtle neon grid effect */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: radial-gradient(rgba(0, 255, 150, 0.25) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridFloat 8s infinite ease-in-out;
+      filter: blur(1px);
+      z-index: 0;
+    }
+
+    @keyframes gridFloat {
+      0% {
+        transform: translateY(0);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: translateY(-30px);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 0.8;
+      }
+    }
+
+    /* Ensure header, videos, etc. are above animation */
+    header,
+    main,
+    footer {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Glow around section titles */
+    section.portfolio pre span {
+      color: #00ff33;
+      text-shadow: 0 0 10px #00ff33; 0 0 25px #00ff33;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Neon Floating Background -->
+  <div class="bg-animation"></div>
+
+  <!-- ---------------------------------------------------
+Header 
+--------------------------------------------------- -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html#body">
+          <img src="Images/Logo/Full Logo.png" alt="" loading="lazy">
+          <img class="small-logo" src="Images/Logo/Logo Mark.png" alt="" loading="lazy">
+        </a>
+      </div>
+      <div class="links-box">
+        <ul>
+          <li><a href="index.html#body">Home</a></li>
+          <li><a href="index.html#clients">Our Clients</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+        </ul>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+        </div>
+      </div>
+      <div class="hdr-cta">
+        <a href="index.html#clients">Our Clients</a>
+      </div>
+    </nav>
+
+    <!-- Mobile SideBar -->
+    <div class="sidebar-menu">
+      <ul class="links">
+        <li><a href="index.html#body">Home</a></li>
+        <li><a href="index.html#clients">Our Clients</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+      </ul>
+    </div>
+    <div id="overlay" class="overlay"></div>
+  </header>
+
+  <main>
+    <!-- ---------------------------------------------------
+portfolio Section
+--------------------------------------------------- -->
+    <section class="portfolio" id="portfolio">
+      <pre data-aos="zoom-in" data-aos-duration="1000">
+           Videos
+      <span>that Makes </span>
+your brand spread
+<span>like wildfire</span>
+</pre>
+
+      <div class="portfolio-vids">
+
+      
+      
+        <!-- First One -->
+        <script src="https://fast.wistia.com/player.js" async></script>
+        <script src="https://fast.wistia.com/embed/4rjqje7ltu.js" async type="module"></script>
+        <style>
+          wistia-player[media-id='4rjqje7ltu']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/4rjqje7ltu/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 177.78%;
+          }
+        </style>
+        <wistia-player media-id="4rjqje7ltu" aspect="0.5625" class="portfolio-vid first-left-one"></wistia-player>
+
+        <!-- Second One -->
+        <script src="https://fast.wistia.com/embed/vvbdror6yy.js" async type="module"></script>
+        <style>
+          wistia-player[media-id='vvbdror6yy']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/vvbdror6yy/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 177.78%;
+          }
+        </style>
+        <wistia-player media-id="vvbdror6yy" aspect="0.5625" class="portfolio-vid"></wistia-player>
+
+
+       <!-- Third One -->
+        <script src="https://fast.wistia.com/embed/74qhohlfm4.js" async type="module"></script>
+        <style>
+          wistia-player[media-id='74qhohlfm4']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/74qhohlfm4/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 177.78%;
+          }
+        </style>
+        <wistia-player media-id="74qhohlfm4" aspect="0.5625" class="portfolio-vid first-right-one"></wistia-player>
+      </div>
+
+      <!-- ---------------------------------------------------
+Other Vids
+--------------------------------------------------- -->
+      <div class="other-vids portfolio-vids">
+
+        <!-- Video 1 -->
+        <script src="https://fast.wistia.com/embed/qf18frvv8u.js" async type="module"></script>
+        <style>
+          wistia-player[media-id='qf18frvv8u']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/qf18frvv8u/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 177.78%;
+          }
+        </style>
+        <wistia-player media-id="qf18frvv8u" aspect="0.5625" class="portfolio-vid"></wistia-player>
+
+        <!-- Video 2 -->
+        <script src="https://fast.wistia.com/embed/nnk0imdzv2.js" async type="module"></script>
+        <style>
+          wistia-player[media-id='nnk0imdzv2']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/nnk0imdzv2/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 177.78%;
+          }
+        </style>
+        <wistia-player media-id="nnk0imdzv2" aspect="0.5625" class="portfolio-vid"></wistia-player>
+
+        <!-- Video 3 -->
+        <script src="https://fast.wistia.com/embed/pkj13x9zcq.js" async type="module"></script>
+        <style>
+          wistia-player[media-id='pkj13x9zcq']:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/pkj13x9zcq/swatch');
+            display: block;
+            filter: blur(5px);
+            padding-top: 177.78%;
+          }
+        </style>
+        <wistia-player media-id="pkj13x9zcq" aspect="0.5625" class="portfolio-vid"></wistia-player>
+
+      <!-- ---------------------------------------------------
+Book a Call Section 
+--------------------------------------------------- -->
+      <section class="book-a-call" id="book-a-call">
+        <div class="container">
+          <div class="icon"><img src="Images/Icons/Book a Call Icon.png" alt=""></div>
+          <h2>Book a Call</h2>
+          <p>Let's Have a Discussion and know your Requirements!</p>
+
+          <a href="http://wa.me/917889676481" target="_blank" class="cta filled-cta">Book a Call</a>
+          <a href="mailto:teamourcashmir@gmail.com" target="_blank" class="cta">Get in Touch</a>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    <p>Copyright @ 2025 Cubik Growth. All right reserved</p>
+    <div style="text-decoration: underline !important; text-align: center; margin-top: 1rem;">
+      <a href="tac.html" style="margin: 0 1rem;">Terms And Conditions</a>
+      <a href="pp.html" style="margin: 0 1rem;">Privacy Policy</a> <br>
+      <a href="sp.html" style="margin: 0 1rem;">Shipping Policy</a>
+      <a href="car.html" style="margin: 0 1rem;">Cancellation and Refunds</a>
+      <a href="contact.html" style="margin: 0 1rem;">Contact Us</a>
+    </div>
+  </footer>
+
+  <!-- Floating Dots Script -->
+  <script>
+    const bg = document.querySelector(".bg-animation");
+    for (let i = 0; i < 30; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("floating-dot");
+      dot.style.width = Math.random() * 8 + 4 + "px";
+      dot.style.height = dot.style.width;
+      dot.style.top = Math.random() * 100 + "%";
+      dot.style.left = Math.random() * 100 + "%";
+      dot.style.animationDuration = Math.random() * 8 + 5 + "s";
+      bg.appendChild(dot);
+    }
+  </script>
+</body>
+</html>
