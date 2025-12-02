@@ -90,6 +90,7 @@
         transform: translateY(0) translateX(0);
         opacity: 0.6;
       }
+    }
     </style>
 </head>
 
@@ -153,13 +154,13 @@ Clients Section
                     <a href="https://www.instagram.com/justzingofficial/" target="_blank">
                         <img src="Images/People/logo-270.png" alt="">
                     </a>
-                    <p>JustZing</p>
+                    <p>Just Zing</p>
                 </div>
                 <div class="client">
-            <a href="https://www.instagram.com/reel/DJ6pHNfTd3T/" target="_blank">
-                <img src="Images/People/ink spot.jpg" alt="">
+            <a href="https://www.instagram.com/reel/DRrmz4niYuB/" target="_blank">
+                <img src="Images/People/EYE CARE.jpg" alt="">
             </a>
-            <p>Ink Spot</p>
+            <p>Eye Care Centre</p>
         </div>
                 <div class="client">
                     <a href="https://www.instagram.com/khushwara_kahave/" target="_blank">
@@ -217,7 +218,7 @@ Clients Section
                     <p>Bachpan School</p>
                 </div>
                 <div class="client">
-                    <a href="https://www.instagram.com/reel/DOYfb9vCel2/" target="_blank">
+                    <a href="https://www.instagram.com/reel/DPRXWvDiYaH/" target="_blank">
                         <img src="Images/People/deconcepts.jpg" alt="">
                     </a>
                     <p>DeConcepts SGR</p>
@@ -272,5 +273,23 @@ Book a Call Section
         </div>
     </footer>
 
+    <!-- Neon Floating Background -->
+    <div class="bg-animation"></div>
 
-</style></body>
+    <!-- Floating Dots Script -->
+<script>
+  const bg = document.querySelector(".bg-animation");
+  for (let i = 0; i < 30; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("floating-dot");
+    dot.style.width = Math.random() * 8 + 4 + "px";
+    dot.style.height = dot.style.width;
+    dot.style.top = Math.random() * 100 + "%";
+    dot.style.left = Math.random() * 100 + "%";
+    dot.style.animationDuration = Math.random() * 8 + 5 + "s";
+    bg.appendChild(dot);
+  }
+</script>
+</body>
+
+</html>
