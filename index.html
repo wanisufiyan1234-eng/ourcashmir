@@ -997,7 +997,9 @@ FAQs Section
             </div>
         </section>
         <!-- ---------------------------------------------------
-<!-- Team Section
+Team Section
+--------------------------------------------------- -->
+        <!-- Team Section
 --------------------------------------------------- -->
 <section class="team" id="team">
     <pre>Our<span> Founder</span></pre>
@@ -1015,7 +1017,6 @@ FAQs Section
                 <p><span>Founder &</span> CEO</p>
 
                 <div class="icons">
-                    <img src="Images/Icons/insta.png" alt="Sufiyan Wani">
                 </div>
 
             </div>
@@ -1024,6 +1025,13 @@ FAQs Section
 
     </div>
 </section>
+
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <!-- ---------------------------------------------------
 Book a Call Section 
@@ -1413,58 +1421,64 @@ Book a Call Section
             top: 60px !important;
         }
 
-        /* Team Section Mobile Small */
+        /* Team Section Mobile Small - Improved for responsiveness */
         .team {
-            padding: 1.5rem 1rem !important;
+            padding: 1rem 0.5rem !important;
         }
 
         .team pre {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
 
         .team .container {
-            grid-template-columns: 1fr;
-            gap: 1rem;
+            grid-template-columns: 1fr !important;
+            gap: 0.7rem;
             padding: 0;
+            width: 100%;
+            max-width: 100%;
         }
 
         .team-member {
             aspect-ratio: 1 / 1;
-            padding: 1rem;
+            padding: 0.7rem 0.5rem;
             border-radius: 10px;
+            min-width: 0;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
         }
 
         .team-member h2 {
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .team-member p {
-            font-size: 0.75rem;
-            margin: 0.3rem 0 0.8rem 0;
+            font-size: 0.7rem;
+            margin: 0.2rem 0 0.6rem 0;
         }
 
         .team-member .icons a img {
-            width: 25px;
-            height: 25px;
+            width: 22px;
+            height: 22px;
         }
 
         /* Book a Call Mobile Extra Small */
         .book-a-call {
-            padding: 1.5rem 1rem !important;
+            padding: 1.2rem 0.5rem !important;
         }
 
         .book-a-call h2 {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
 
         .book-a-call > p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         .book-a-call .cta {
-            padding: 8px 20px;
-            font-size: 0.85rem;
+            padding: 7px 14px;
+            font-size: 0.8rem;
             width: 100%;
         }
     }

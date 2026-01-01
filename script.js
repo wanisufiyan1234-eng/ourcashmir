@@ -73,48 +73,37 @@ function handleScroll() {
           });
         };
   /*--------------------------------------------------------------
-      # Side Bar Open Close Logic
-      --------------------------------------------------------------*/
-      const toggleBtn = document.querySelector(".toggle-btn");
-      const toggleBtnIcon = document.querySelector(".toggle-btn i");
-      const sideBarMenu = document.querySelector(".sidebar-menu");
-      const overlay = document.querySelector(".overlay");
-      const sideBarBtns = document.querySelectorAll(".links li");
-  
-      sideBarBtns.forEach(function(btn) {
-          btn.addEventListener("click", function () {
-              closeSidebar();
-          });
-      });
-  
-      toggleBtn.addEventListener("click", function () {
-          sideBarMenu.classList.toggle("open");
-          overlay.classList.toggle("blurred");
-  
-  
-  
-          const isOpen = sideBarMenu.classList.contains("open");
-  
-          toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-  
-      });
-  
-      function closeSidebar() {
-          sideBarMenu.classList.remove("open");
-          toggleBtnIcon.classList = "fa-solid fa-bars";
-          overlay.classList.remove("blurred");
-  
-  
-      }
-  
-      window.addEventListener("click", function (event) {
-          if (
-              !sideBarMenu.contains(event.target) && // Clicked outside the sidebar
-              event.target !== toggleBtnIcon // Clicked outside the toggle button
-          ) {
-              closeSidebar();
-          }
-      });
+            # Side Bar Open Close Logic
+            --------------------------------------------------------------*/
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggleBtn = document.querySelector('.toggle-btn');
+                const toggleBtnIcon = document.querySelector('.toggle-btn i');
+                const sidebarMenu = document.querySelector('.sidebar-menu');
+                const overlay = document.getElementById('overlay') || document.querySelector('.overlay');
+                const sidebarLinks = document.querySelectorAll('.sidebar-menu .links a');
+
+                function openSidebar() {
+                    sidebarMenu.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    if (toggleBtnIcon) toggleBtnIcon.classList = 'fa-solid fa-xmark';
+                }
+                function closeSidebar() {
+                    sidebarMenu.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                    if (toggleBtnIcon) toggleBtnIcon.classList = 'fa-solid fa-bars';
+                }
+                if (toggleBtn) {
+                    toggleBtn.addEventListener('click', openSidebar);
+                }
+                if (overlay) {
+                    overlay.addEventListener('click', closeSidebar);
+                }
+                sidebarLinks.forEach(link => {
+                    link.addEventListener('click', closeSidebar);
+                });
+            });
   
    
   /*--------------------------------------------------------------
